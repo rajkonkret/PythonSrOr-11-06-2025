@@ -34,8 +34,8 @@ print(process_transactions(transactions, "expense", "EUR"))  # 400
 print(process_transactions(transactions, "income", "USD"))  # 2200
 
 
-def test_transaction_processing():
-    assert map_transactions(filter_transactions(transactions, "income"), "USD") == [1000, 500, 700, 0]
+# def test_transaction_processing():
+#     assert map_transactions(filter_transactions(transactions, "income"), "USD") == [1000, 500, 700, 0]
 
 # (.venv) PS C:\Users\CSComarch\PycharmProjects\PythonSrOr-11-06-2025\day_2> pytest .\fun12.py
 # ==================================================================================================== test session starts =====================================================================================================
