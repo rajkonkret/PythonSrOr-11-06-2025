@@ -85,8 +85,30 @@ def my_for_map_operator():
     l_map = list(map(partial(operator.mul, 2), lista2))
 
 
+@measure_time
+def add_without_np():
+    result = [lista1[i] + lista2[i] for i in range(len(lista1))]
+    return "OK"
+
+
+@measure_time
+def add_zip():
+    res = [a + b for a, b in zip(lista1, lista2)]
+    return "OK ZIP"
+
+
+@measure_time
+def add_np():
+    result = array1 + array2
+    return "OK NP"
+
+
 my_time()
 my_for()
 my_for_with_map()
 my_for_list_compr()
 my_for_map_operator()
+
+print(add_zip())
+print(add_without_np())
+print(add_np())
