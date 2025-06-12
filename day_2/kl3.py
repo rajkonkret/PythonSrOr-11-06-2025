@@ -21,7 +21,7 @@ class Contact:
     Klasa Contact
     """
     # all_contacts = []
-    all_contacts = ContactList()
+    all_contacts = ContactList()  # dla wszystkich obiektów klasy
 
     def __init__(self, name, email):
         """
@@ -97,3 +97,11 @@ pprint(f2.all_contacts)
 #  Marek marek@wp.pl,
 #  'Kasia' 'kasia@wp.pl', '+48000-000-000',
 #  'Asia' 'asia@wp.pl', '567890345']
+
+print(c1)
+c1.name = "Zenek"
+print(c1)
+print(Contact.all_contacts)
+print(s1.all_contacts)
+# [Zenek adam@wp.pl, Radek radek@wp.pl, Marek marek@wp.pl, 'Kasia' 'kasia@wp.pl',
+# '+48000-000-000', 'Asia' 'asia@wp.pl', '567890345']
