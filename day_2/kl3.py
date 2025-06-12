@@ -60,6 +60,7 @@ class Friend(Suplier):
         return f"{self.name!r} {self.email!r}, {self.phone!r}"
 
 
+Contact.all_contacts.append(Contact("Radek", "radek2@wppl"))
 c1 = Contact("Adam", "adam@wp.pl")
 print(c1)  # Adam adam@wp.pl
 c2 = Contact("Radek", "radek@wp.pl")
