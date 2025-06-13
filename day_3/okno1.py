@@ -1,5 +1,6 @@
 import tkinter as tk
 
+# https://customtkbuilder.com/ edytor okienek
 root = tk.Tk()
 root.title("Pole tekstowe")
 root.geometry("300x150")
