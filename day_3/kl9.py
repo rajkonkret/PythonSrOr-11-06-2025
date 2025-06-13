@@ -22,22 +22,23 @@ class Person:
     def greets(self):
         print("My name is:", self.first_name)
 
+print(__name__)
+if __name__ == '__main__':
+    p2 = Person("Jan", "Kowalski", 1)
+    print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
+    p2.greets()  # My name is: Jan
 
-p2 = Person("Jan", "Kowalski", 1)
-print(p2)  # Person(first_name='Jan', last_name='Kowalski', id=1)
-p2.greets()  # My name is: Jan
+    p3 = Person("Maciej", "Nowak", 2)
+    print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
 
-p3 = Person("Maciej", "Nowak", 2)
-print(p3)  # Person(first_name='Maciej', last_name='Nowak', id=2)
+    people = [p2, p3]
+    print(people)
+    # [Person(first_name='Jan', last_name='Kowalski', id=1), Person(first_name='Maciej', last_name='Nowak', id=2)]
 
-people = [p2, p3]
-print(people)
-# [Person(first_name='Jan', last_name='Kowalski', id=1), Person(first_name='Maciej', last_name='Nowak', id=2)]
+    with open("lista.txt", "w") as fh:
+        fh.write(str(people))
 
-with open("lista.txt", "w") as fh:
-    fh.write(str(people))
+    print()
 
-print()
-
-with open("dane.pckl", "wb") as fh:
-    pickle.dump(people, fh)
+    with open("dane.pckl", "wb") as fh:
+        pickle.dump(people, fh)
