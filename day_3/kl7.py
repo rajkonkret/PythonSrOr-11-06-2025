@@ -18,7 +18,8 @@ class Counter(ABC):
 
     @classmethod
     def from_counter(cls, counter: "Counter"):  # dodatkowy konstruktor, (symuluje przeciążanie)
-        return cls(counter.values)
+        # Counter(counter.values)
+        return cls(counter.values) # zwraca obiekt klasy
 
 
 class BoundedCounter(Counter):
