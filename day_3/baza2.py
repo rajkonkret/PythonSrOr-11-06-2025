@@ -31,9 +31,9 @@ Base.metadata.create_all(engine)  # tworzenie struktury w bazie danych
 Sesion = sessionmaker(bind=engine)
 session = Sesion()
 
-# person = Person(name="Radek", age="23")
-# session.add(person) #  INSERT INTO person (name, age) VALUES (?, ?) ('Radek', '23')
-# session.commit()
+person = Person(name="Radek", age="23")
+session.add(person)  # INSERT INTO person (name, age) VALUES (?, ?) ('Radek', '23')
+session.commit()
 
 persons = session.query(Person).all()
 print(persons)  # [self.name='Radek', self.age='23']
